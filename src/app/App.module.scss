@@ -1,14 +1,31 @@
+@import './src/common/styles/mixins';
+@import './src/common/styles/variables';
+
 .container {
   .header {
     background-color: #f3c3dc;
-    height: 70px;
+    height: 8vh;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    @include text($titleFontFamily, 30px, 1.2, 700);
   }
-  .content {
+  .contentContainer {
+    @include flex(row, center, flex-start, nowrap);
     background-color: #cff3dc;
-    min-height: 100vh;
+    min-height: 80vh;
+    .filter {
+      background-color: #faccc6;
+      width: 25%;
+    }
+    .content {
+      background-color: #cbdaee;
+      width: 75%;
+      min-height: 80vh;
+    }
   }
   .footer {
     background-color: #f3e8c3;
-    height: 250px;
+    height: 12vh;
   }
 }
