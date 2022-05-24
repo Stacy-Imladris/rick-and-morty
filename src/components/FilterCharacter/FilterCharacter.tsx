@@ -1,28 +1,15 @@
 import {useState} from 'react';
 import s from './FilterCharacter.module.scss'
+import {StatusFilter} from './StatusFilter/StatusFilter';
 
 export const FilterCharacter = () => {
-    const [statusOn, setStatusOn] = useState<boolean>(false)
     const [speciesOn, setSpeciesOn] = useState<boolean>(false)
     const [genderOn, setGenderOn] = useState<boolean>(false)
 
     return (
         <div className={s.container}>
             <div className={s.filter}>Filters</div>
-            <div onMouseEnter={() => setStatusOn(true)}
-                 onMouseLeave={() => setStatusOn(false)}>
-                <div className={s.title}>
-                    <div>Status</div>
-                    <div>▽</div>
-                </div>
-                {
-                    statusOn && <div>
-                      <button>alive</button>
-                      <button>dead</button>
-                      <button>unknown</button>
-                    </div>
-                }
-            </div>
+            <StatusFilter/>
             <div onMouseEnter={() => setSpeciesOn(true)}
                  onMouseLeave={() => setSpeciesOn(false)}>
                 <div className={s.title}>
