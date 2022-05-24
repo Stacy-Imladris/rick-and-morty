@@ -35,7 +35,10 @@ export const charactersAsyncActions = {getCharacters}
 //export const setAppError = createAction<{ error: null | string }>('app/setAppError')
 
 const charactersInitialState = {
-    characters: [] as CharacterType[]
+    characters: [] as CharacterType[],
+    params: {
+        page: 1,
+    } as CharactersParamsType,
 }
 
 export const slice = createSlice({
@@ -58,3 +61,6 @@ export const charactersReducer = slice.reducer
 
 //types
 export type CharactersInitialStateType = typeof charactersInitialState
+export type CharactersParamsType = {
+    page: number
+}
