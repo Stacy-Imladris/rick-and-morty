@@ -19,7 +19,6 @@ export const getCharacters = createAsyncThunk('characters/getCharacters', async 
 })
 
 export const charactersAsyncActions = {getCharacters}
-//export const setAppError = createAction<{ error: null | string }>('app/setAppError')
 
 const charactersInitialState = {
     characters: [] as CharacterType[],
@@ -41,12 +40,6 @@ export const slice = createSlice({
         .addCase(getCharacters.fulfilled, (state, action) => {
             state.characters = action.payload.characters
         })
-    /*.addCase(initializeApp.rejected, (state) => {
-        state.isInitialized = true
-    })
-    .addCase(setAppError, (state, action) => {
-        state.error = action.payload.error
-    })*/
 })
 
 export const charactersReducer = slice.reducer
