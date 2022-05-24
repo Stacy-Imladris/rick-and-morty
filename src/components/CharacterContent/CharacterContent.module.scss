@@ -1,7 +1,7 @@
+@import '../../common/styles/mixins';
+
 .container {
   .characterBlock {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    @include flex(row, center, center, wrap);
   }
 }
