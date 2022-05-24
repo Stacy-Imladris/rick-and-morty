@@ -1,9 +1,10 @@
 import {instance, ResponseType} from './api';
 import {AxiosResponse} from 'axios';
+import {CharactersParamsType} from '../store/characters-reducer';
 
 export const charactersAPI = {
-    getCharacters() {
-        return instance.get<any, AxiosResponse<ResponseType<CharacterType>>>('character').then(res => res.data)
+    getCharacters(params: CharactersParamsType) {
+        return instance.get<any, AxiosResponse<ResponseType<CharacterType>>>('character', {params}).then(res => res.data)
     },
 }
 

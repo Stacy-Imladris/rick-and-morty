@@ -1,10 +1,11 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
 import {charactersAPI, CharacterType} from '../api/characters-api';
-import {Nullable} from '../api/api';
+import {RootState} from './store';
 
-export const getCharacters = createAsyncThunk('characters/getCharacters', async (param, {rejectWithValue}) => {
+export const getCharacters = createAsyncThunk('characters/getCharacters', async (param, {getState, rejectWithValue}) => {
     try {
-        const data = await charactersAPI.getCharacters()
+        const params: CharactersParamsType = (getState() as RootState).characters.params
+        const data = await charactersAPI.getCharacters(params)
         return {characters: data.results}
     } catch (error) {
         return rejectWithValue(null)

@@ -27,7 +27,7 @@ export const Content = () => {
     return <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
         {
             characters.map(m => (
-                <div>
+                <div key={m.id}>
                     <div><img src={m.image} alt={'Character\'s image'}/></div>
                     <div>Name: {m.name}</div>
                     <div>Name: {m.created}</div>
