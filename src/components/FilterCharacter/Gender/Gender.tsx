@@ -1,5 +1,6 @@
 import s from '../FilterCharacter.module.scss';
 import {useState} from 'react';
+import {FilterButton} from '../../../common/components/FilterButton/FilterButton';
 
 export const Gender = () => {
     const [genderOn, setGenderOn] = useState<boolean>(false)
@@ -12,10 +13,10 @@ export const Gender = () => {
         </div>
         {
             genderOn && <div>
-              <button>female</button>
-              <button>male</button>
-              <button>genderless</button>
-              <button>unknown</button>
+              <FilterButton title={'female'}/>
+              <FilterButton title={'male'}/>
+              <FilterButton title={'genderless'}/>
+              <FilterButton title={'unknown'}/>
             </div>
         }
     </div>
