@@ -5,7 +5,7 @@ type CharacterPropsType = {
     character: CharacterType
 }
 export const Character = ({character}: CharacterPropsType) => {
-    const {image, name, gender, location, species, status,} = character
+    const {image, name, gender, location, species, status} = character
 
     const statusColor = status === 'Alive' ? '#7bfd91' : status === 'Dead' ? '#fd7b7b' : '#7be7fd'
 
