@@ -1,7 +1,7 @@
 import s from './FilterCharacter.module.scss'
 import {Status} from './Status/Status';
-import {Species} from './SpeciesFilter/Species';
-import {Gender} from './GenderFilter/Gender';
+import {Species} from './Species/Species';
+import {Gender} from './Gender/Gender';
 
 export const FilterCharacter = () => {
     return (
