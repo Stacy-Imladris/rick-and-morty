@@ -3,6 +3,8 @@ import {useEffect} from 'react';
 import {getCharacters} from '../../store/characters-reducer';
 import s from './CharacterContent.module.scss'
 import {Character} from './Character/Character';
+import {Paginator} from './Paginator/Paginator';
+import {Search} from './Search/Search';
 
 export const CharacterContent = () => {
     const dispatch = useAppDispatch()
@@ -13,9 +15,11 @@ export const CharacterContent = () => {
     }, [])
 
     return <div className={s.container}>
+        <Search/>
         {
             characters.map(m => <Character key={m.id} character={m}/>)
         }
+        <Paginator/>
     </div>
 }
 
