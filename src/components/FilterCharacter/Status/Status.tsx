@@ -1,5 +1,6 @@
 import s from '../FilterCharacter.module.scss';
 import {useState} from 'react';
+import {FilterButton} from '../../../common/components/FilterButton/FilterButton';
 
 export const Status = () => {
     const [statusOn, setStatusOn] = useState<boolean>(false)
@@ -12,9 +13,9 @@ export const Status = () => {
         </div>
         {
             statusOn && <div>
-              <button>alive</button>
-              <button>dead</button>
-              <button>unknown</button>
+              <FilterButton title={'alive'}/>
+              <FilterButton title={'dead'}/>
+              <FilterButton title={'unknown'}/>
             </div>
         }
     </div>
