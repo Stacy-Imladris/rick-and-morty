@@ -22,7 +22,7 @@ export const Character = ({character}: CharacterPropsType) => {
 
     return <div className={s.container}>
         <div className={s.imageBlock}>
-            <img src={image} alt={'Character\'s image'}/>
+            <img className={s.image} src={image} alt={'Character\'s image'}/>
             <div className={s.status} style={{backgroundColor: statusColor}}>
                 {status}
             </div>
