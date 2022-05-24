@@ -18,7 +18,7 @@ export const Character = ({character}: CharacterPropsType) => {
         type
     } = character
 
-    const statusColor = status === 'Alive' ? 'green' : status === 'Dead' ? 'red' : 'blue'
+    const statusColor = status === 'Alive' ? '#7bfd91' : status === 'Dead' ? '#fd7b7b' : '#7be7fd'
 
     return <div className={s.container}>
         <div className={s.imageBlock}>
