@@ -13,17 +13,17 @@ export const Species = () => {
         </div>
         {
             speciesOn && <div>
-              <FilterButton title={'Human'}/>
-              <FilterButton title={'Alien'}/>
-              <FilterButton title={'Humanoid'}/>
-              <FilterButton title={'Poopybutthole'}/>
-              <FilterButton title={'Mythological'}/>
-              <FilterButton title={'Unknown'}/>
-              <FilterButton title={'Animal'}/>
-              <FilterButton title={'Disease'}/>
-              <FilterButton title={'Robot'}/>
-              <FilterButton title={'Cronenberg'}/>
-              <FilterButton title={'Planet'}/>
+              <FilterButton title={'Human'} onClick={() => onClickSetGender('female')}/>
+              <FilterButton title={'Alien'} onClick={() => onClickSetGender('female')}/>
+              <FilterButton title={'Humanoid'} onClick={() => onClickSetGender('female')}/>
+              <FilterButton title={'Poopybutthole'} onClick={() => onClickSetGender('female')}/>
+              <FilterButton title={'Mythological'} onClick={() => onClickSetGender('female')}/>
+              <FilterButton title={'Unknown'} onClick={() => onClickSetGender('female')}/>
+              <FilterButton title={'Animal'} onClick={() => onClickSetGender('female')}/>
+              <FilterButton title={'Disease'} onClick={() => onClickSetGender('female')}/>
+              <FilterButton title={'Robot'} onClick={() => onClickSetGender('female')}/>
+              <FilterButton title={'Cronenberg'} onClick={() => onClickSetGender('female')}/>
+              <FilterButton title={'Planet'} onClick={() => onClickSetGender('female')}/>
             </div>
         }
     </div>
