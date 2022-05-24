@@ -1,7 +1,8 @@
 import s from '../FilterCharacter.module.scss';
+import {useState} from 'react';
 
 export const Gender = () => {
-
+    const [genderOn, setGenderOn] = useState<boolean>(false)
 
     return <div onMouseEnter={() => setGenderOn(true)}
                 onMouseLeave={() => setGenderOn(false)}>
