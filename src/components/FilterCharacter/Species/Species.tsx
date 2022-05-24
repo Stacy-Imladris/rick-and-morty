@@ -1,5 +1,6 @@
 import s from '../FilterCharacter.module.scss';
 import {useState} from 'react';
+import {FilterButton} from '../../../common/components/FilterButton/FilterButton';
 
 export const Species = () => {
     const [speciesOn, setSpeciesOn] = useState<boolean>(false)
@@ -12,17 +13,17 @@ export const Species = () => {
         </div>
         {
             speciesOn && <div>
-              <button>Human</button>
-              <button>Alien</button>
-              <button>Humanoid</button>
-              <button>Poopybutthole</button>
-              <button>Mythological</button>
-              <button>Unknown</button>
-              <button>Animal</button>
-              <button>Disease</button>
-              <button>Robot</button>
-              <button>Cronenberg</button>
-              <button>Planet</button>
+              <FilterButton title={'Human'}/>
+              <FilterButton title={'Alien'}/>
+              <FilterButton title={'Humanoid'}/>
+              <FilterButton title={'Poopybutthole'}/>
+              <FilterButton title={'Mythological'}/>
+              <FilterButton title={'Unknown'}/>
+              <FilterButton title={'Animal'}/>
+              <FilterButton title={'Disease'}/>
+              <FilterButton title={'Robot'}/>
+              <FilterButton title={'Cronenberg'}/>
+              <FilterButton title={'Planet'}/>
             </div>
         }
     </div>
