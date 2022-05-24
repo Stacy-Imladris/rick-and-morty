@@ -18,26 +18,6 @@ export const getCharacters = createAsyncThunk('characters/getCharacters', async 
     }
 })
 
-// export const createTask = createAsyncThunk('tasks/createTask', async (payload: { Tid: string, title: string }, {
-//     dispatch,
-//     rejectWithValue
-// }) => {
-//     dispatch(setAppStatus({status: 'loading'}))
-//     try {
-//         const res = await tasksAPI.createTask(payload.Tid, payload.title)
-//         if (res.data.resultCode === 0) {
-//             dispatch(setAppStatus({status: 'succeeded'}))
-//             return {task: res.data.data.item}
-//         } else {
-//             handleServerAppError(dispatch, res.data)
-//             return rejectWithValue(null)
-//         }
-//     } catch (error) {
-//         handleServerNetworkError(dispatch, error as Error)
-//         return rejectWithValue(null)
-//     }
-// })
-
 export const charactersAsyncActions = {getCharacters}
 //export const setAppError = createAction<{ error: null | string }>('app/setAppError')
 
