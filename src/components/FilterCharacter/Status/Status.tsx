@@ -1,7 +1,7 @@
 import s from '../FilterCharacter.module.scss';
 import {useState} from 'react';
 
-export const StatusFilter = () => {
+export const Status = () => {
     const [statusOn, setStatusOn] = useState<boolean>(false)
 
     return <div onMouseEnter={() => setStatusOn(true)}
