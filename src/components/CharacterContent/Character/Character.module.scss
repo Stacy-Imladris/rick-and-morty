@@ -1,0 +1,10 @@
+.container {
+  .imageBlock {
+    position: relative;
+    .status {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
