@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import s from './FilterCharacter.module.scss'
 
 export const FilterCharacter = () => {
     const [statusOn, setStatusOn] = useState<boolean>(false)
@@ -6,11 +7,11 @@ export const FilterCharacter = () => {
     const [genderOn, setGenderOn] = useState<boolean>(false)
 
     return (
-        <div>
-            <div style={{textAlign: 'center'}}>Filters</div>
+        <div className={s.container}>
+            <div className={s.filter}>Filters</div>
             <div onMouseEnter={() => setStatusOn(true)}
                  onMouseLeave={() => setStatusOn(false)}>
-                <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                <div className={s.title}>
                     <div>Status</div>
                     <div>▽</div>
                 </div>
@@ -24,7 +25,7 @@ export const FilterCharacter = () => {
             </div>
             <div onMouseEnter={() => setSpeciesOn(true)}
                  onMouseLeave={() => setSpeciesOn(false)}>
-                <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                <div className={s.title}>
                     <div>Species</div>
                     <div>▽</div>
                 </div>
@@ -46,7 +47,7 @@ export const FilterCharacter = () => {
             </div>
             <div onMouseEnter={() => setGenderOn(true)}
                  onMouseLeave={() => setGenderOn(false)}>
-                <div style={{display: 'flex', justifyContent: 'space-between'}}>
+                <div className={s.title}>
                     <div>Gender</div>
                     <div>▽</div>
                 </div>

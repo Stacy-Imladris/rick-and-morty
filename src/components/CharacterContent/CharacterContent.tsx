@@ -1,6 +1,7 @@
 import {useAppDispatch, useAppSelector} from '../../store/store';
 import {useEffect} from 'react';
 import {getCharacters} from '../../store/characters-reducer';
+import s from './CharacterContent.module.scss'
 
 export const CharacterContent = () => {
     const dispatch = useAppDispatch()
@@ -10,7 +11,7 @@ export const CharacterContent = () => {
         dispatch(getCharacters())
     }, [])
 
-    return <div style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
+    return <div className={s.container}>
         {
             characters.map(m => (
                 <div key={m.id}>
