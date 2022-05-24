@@ -16,9 +16,7 @@ export const CharacterContent = () => {
 
     return <div className={s.container}>
         <Search/>
-        {
-            characters.map(m => <Character key={m.id} character={m}/>)
-        }
+        <div className={s.characterBlock}>{characters.map(m => <Character key={m.id} character={m}/>)}</div>
         <Paginator/>
     </div>
 }
