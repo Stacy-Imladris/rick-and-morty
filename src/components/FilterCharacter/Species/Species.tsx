@@ -1,9 +1,18 @@
 import s from '../FilterCharacter.module.scss';
 import {useState} from 'react';
 import {FilterButton} from '../../../common/components/FilterButton/FilterButton';
+import {useAppDispatch} from '../../../store/store';
+import {getCharacters} from '../../../store/characters-reducer';
 
 export const Species = () => {
     const [speciesOn, setSpeciesOn] = useState<boolean>(false)
+
+    const dispatch = useAppDispatch()
+
+    const onClickSetSpecies = (value: string) => {
+        //dispatch(params...)
+        dispatch(getCharacters())
+    }
 
     return <div onMouseEnter={() => setSpeciesOn(true)}
                 onMouseLeave={() => setSpeciesOn(false)}>
@@ -13,17 +22,17 @@ export const Species = () => {
         </div>
         {
             speciesOn && <div>
-              <FilterButton title={'Human'} onClick={() => onClickSetGender('female')}/>
-              <FilterButton title={'Alien'} onClick={() => onClickSetGender('female')}/>
-              <FilterButton title={'Humanoid'} onClick={() => onClickSetGender('female')}/>
-              <FilterButton title={'Poopybutthole'} onClick={() => onClickSetGender('female')}/>
-              <FilterButton title={'Mythological'} onClick={() => onClickSetGender('female')}/>
-              <FilterButton title={'Unknown'} onClick={() => onClickSetGender('female')}/>
-              <FilterButton title={'Animal'} onClick={() => onClickSetGender('female')}/>
-              <FilterButton title={'Disease'} onClick={() => onClickSetGender('female')}/>
-              <FilterButton title={'Robot'} onClick={() => onClickSetGender('female')}/>
-              <FilterButton title={'Cronenberg'} onClick={() => onClickSetGender('female')}/>
-              <FilterButton title={'Planet'} onClick={() => onClickSetGender('female')}/>
+              <FilterButton title={'Human'} onClick={() => onClickSetSpecies('female')}/>
+              <FilterButton title={'Alien'} onClick={() => onClickSetSpecies('female')}/>
+              <FilterButton title={'Humanoid'} onClick={() => onClickSetSpecies('female')}/>
+              <FilterButton title={'Poopybutthole'} onClick={() => onClickSetSpecies('female')}/>
+              <FilterButton title={'Mythological'} onClick={() => onClickSetSpecies('female')}/>
+              <FilterButton title={'Unknown'} onClick={() => onClickSetSpecies('female')}/>
+              <FilterButton title={'Animal'} onClick={() => onClickSetSpecies('female')}/>
+              <FilterButton title={'Disease'} onClick={() => onClickSetSpecies('female')}/>
+              <FilterButton title={'Robot'} onClick={() => onClickSetSpecies('female')}/>
+              <FilterButton title={'Cronenberg'} onClick={() => onClickSetSpecies('female')}/>
+              <FilterButton title={'Planet'} onClick={() => onClickSetSpecies('female')}/>
             </div>
         }
     </div>
