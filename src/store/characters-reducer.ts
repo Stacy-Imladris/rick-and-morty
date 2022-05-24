@@ -1,6 +1,12 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
-import {charactersAPI, CharacterType} from '../api/characters-api';
+import {
+    charactersAPI,
+    CharacterType,
+    GenderType,
+    StatusType
+} from '../api/characters-api';
 import {RootState} from './store';
+import {Nullable} from '../api/api';
 
 export const getCharacters = createAsyncThunk('characters/getCharacters', async (param, {getState, rejectWithValue}) => {
     try {
@@ -38,7 +44,12 @@ export const charactersAsyncActions = {getCharacters}
 const charactersInitialState = {
     characters: [] as CharacterType[],
     params: {
-        page: 1,
+        page: null,
+        name: null,
+        status: null,
+        species: null,
+        type: null,
+        gender: null,
     } as CharactersParamsType,
 }
 
@@ -63,5 +74,10 @@ export const charactersReducer = slice.reducer
 //types
 export type CharactersInitialStateType = typeof charactersInitialState
 export type CharactersParamsType = {
-    page: number
+    page: Nullable<number>
+    name: Nullable<string>
+    status: Nullable<StatusType>
+    species: Nullable<string>
+    type: Nullable<string>
+    gender: Nullable<GenderType>
 }

@@ -18,12 +18,14 @@ export type CharacterType = {
     name: string
     origin: LocationAndOriginType
     species: string
-    status: string
+    status: StatusType
     type: string
     url: string
 }
 
 export type GenderType = 'Female' | 'Male' | 'Genderless' | 'unknown'
+
+export type StatusType = "Dead" | "Alive" | "unknown"
 
 export type LocationAndOriginType = {
     name: string
