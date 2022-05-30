@@ -3,7 +3,7 @@
 
 .container {
   .header {
-    background-color: #f3c3dc;
+    background-color: $bgSecondColor;
     height: 8vh;
     position: sticky;
     top: 0;
@@ -12,20 +12,19 @@
   }
   .contentContainer {
     @include flex(row, center, flex-start, nowrap);
-    background-color: #cff3dc;
+    background-color: $bgColor;
     min-height: 80vh;
     .filter {
-      background-color: #faccc6;
       width: 25%;
     }
     .content {
-      background-color: #cbdaee;
+      background-color: $primaryColor;
       width: 75%;
       min-height: 80vh;
     }
   }
   .footer {
-    background-color: #f3e8c3;
+    background-color: $bgSecondColor;
     height: 12vh;
   }
 }

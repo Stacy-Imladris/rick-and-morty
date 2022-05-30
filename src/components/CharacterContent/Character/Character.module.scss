@@ -2,22 +2,28 @@
 
 .container {
   @include flex(column, center, center, nowrap);
-  width: 50%;
+  width: 40%;
+  background-color: hotpink;
+  margin: 15px;
+  padding: 10px 0;
+  border-radius: 30px;
+  border: 3px solid $thirdColor;
+  box-shadow: inset 0 -3em 3em rgba(0,0,0,0.2), 0.3em 0.3em 1em rgba(0,0,0,0.5);
   .imageBlock {
     position: relative;
     .image {
       border-radius: 30px;
-      border: 3px solid #5054f5;
-      box-shadow: 5px 5px 7px #9a9df8;
+      border: 3px solid $thirdColor;
+      box-shadow: inset 0 -3em 3em rgba(0,0,0,0.2), 0.3em 0.3em 1em rgba(0,0,0,0.5);
     }
     .status {
       position: absolute;
       top: 0;
-      left: 0;
+      left: 3px;
       background-color: #7bfd91;
       border-radius: 15px;
       margin: 10px;
-      padding: 5px 10px;
+      padding: 2px 10px;
     }
   }
 }
