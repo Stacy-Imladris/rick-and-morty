@@ -16,9 +16,13 @@ export const Character = ({character}: CharacterPropsType) => {
                 {status}
             </div>
         </div>
-        <div>name: {name}</div>
-        <div>gender: {gender}</div>
-        <div>species: {species}</div>
-        <div>location: {location.name}</div>
+        <div className={s.infoBlock}>
+            <div className={s.name}>{name}</div>
+            <div className={s.info}>
+                <div className={s.item}>gender: {gender}</div>
+                <div className={s.item}>species: {species}</div>
+                <div className={s.item}>location: {location.name}</div>
+            </div>
+        </div>
     </div>
 }
